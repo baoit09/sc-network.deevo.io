@@ -38,9 +38,9 @@ CHANNEL_TX_FILE=$DATA/$CHANNEL_NAME.tx
 QUERY_TIMEOUT=30
 
 # clone sourecode
-cd $GOPATH/src/github.com/deevotech
+cd $GOPATH/src/github.com/baoit09
 rm -rf sc-chaincode.deevo.io
-git clone https://github.com/deevotech/sc-chaincode.deevo.io
+git clone https://github.com/baoit09/sc-chaincode.deevo.io
 
 # install chaincode on peer0-org1, peer0-org2
 for ORG in ${PEER_ORGS[*]}; do
