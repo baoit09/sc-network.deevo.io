@@ -58,6 +58,7 @@ export RUN_SUMPATH=./data/logs/ca-${ORG}.log
 # Initialize the root CA
 if [ ${r} -eq 1 ]; then
 	# cp -R ${DATA}/rca-${g}-home/* ${FABRIC_CA_SERVER_HOME}/
+  echo "Restarting Fabric-CA..."
 else
   rm -rf $HOME/fabric-ca/*
   rm -rf $DATA/*
