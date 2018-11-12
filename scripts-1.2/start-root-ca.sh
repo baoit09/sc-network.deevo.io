@@ -44,21 +44,30 @@ export FABRIC_CA_SERVER_CA_NAME=rca.${g}.deevo.io
 export FABRIC_ORGS="replicas org0 org1 org2 org3 org4 org5"
 export FABRIC_CA_SERVER_TLS_CERTFILE=$DATA/ca/tls.rca.${g}.deevo.io.pem
 
-rm -rf $HOME/fabric-ca/*
-rm -rf $DATA/*
-mkdir -p $DATA/ca
+#rm -rf $HOME/fabric-ca/*
+#rm -rf $DATA/*
+#mkdir -p $DATA/ca
 
-mkdir -p data
-mkdir -p data/logs
+#mkdir -p data
+#mkdir -p data/logs
 export RUN_SUMPATH=./data/logs/ca-${ORG}.log
 
-mkdir -p ${FABRIC_CA_SERVER_HOME}
-rm -rf ${FABRIC_CA_SERVER_HOME}/*
+#mkdir -p ${FABRIC_CA_SERVER_HOME}
+#rm -rf ${FABRIC_CA_SERVER_HOME}/*
 
 # Initialize the root CA
 if [ ${r} -eq 1 ]; then
-	cp -R ${DATA}/rca-${g}-home/* ${FABRIC_CA_SERVER_HOME}/
+	# cp -R ${DATA}/rca-${g}-home/* ${FABRIC_CA_SERVER_HOME}/
 else
+  rm -rf $HOME/fabric-ca/*
+  rm -rf $DATA/*
+  mkdir -p $DATA/ca
+
+  mkdir -p data
+  mkdir -p data/logs
+
+  mkdir -p ${FABRIC_CA_SERVER_HOME}
+  rm -rf ${FABRIC_CA_SERVER_HOME}/*
 
 	echo "# Version of config file
 version: 1.2.0

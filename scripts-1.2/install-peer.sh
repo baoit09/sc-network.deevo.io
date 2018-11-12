@@ -27,7 +27,7 @@ go get github.com/AlekSi/gocov-xml
 FABRIC_ROOT=$GOPATH/src/github.com/hyperledger/fabric
 
 cd $GOPATH/src/github.com/hyperledger
-git clone https://github.com/deevotech/fabric -b release-1.2-deevo
+git clone https://github.com/baoit09/fabric -b release-1.2-deevo
 
 #cp $FABRIC_ROOT/devenv/limits.conf /etc/security/limits.conf
 cd $GOPATH/src/github.com/hyperledger/fabric

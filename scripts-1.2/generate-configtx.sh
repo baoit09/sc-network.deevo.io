@@ -61,7 +61,7 @@ for org in $o; do
         ID: ${org}MSP
 
         # MSPDir is the filesystem path which contains the MSP configuration.
-        MSPDir: /home/ubuntu/hyperledgerconfig/data/orgs/${org}/msp
+        MSPDir: /home/baotq/hyperledgerconfig/data/orgs/${org}/msp
 
         # Policies defines the set of policies at this level of the config tree
         # For organization policies, their canonical path is usually
@@ -89,7 +89,7 @@ for org in $r; do
     - &${org}
         Name: ${org}
         ID: ${org}MSP
-        MSPDir: /home/ubuntu/hyperledgerconfig/data/orgs/${org}/msp
+        MSPDir: /home/baotq/hyperledgerconfig/data/orgs/${org}/msp
         Policies:
             Readers:
                 Type: Signature
@@ -107,7 +107,7 @@ for org in $g; do
     - &${org}
         Name: ${org}
         ID: ${org}MSP
-        MSPDir: /home/ubuntu/hyperledgerconfig/data/orgs/${org}/msp
+        MSPDir: /home/baotq/hyperledgerconfig/data/orgs/${org}/msp
         Policies: &${org}Policies
             Readers:
                 Type: Signature
