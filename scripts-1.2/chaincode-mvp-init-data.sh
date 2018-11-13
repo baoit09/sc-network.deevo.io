@@ -48,7 +48,7 @@ for ORG in ${PEER_ORGS[*]}; do
 
 	echo "Install for $PEER_HOST ..."
 	echo $ORDERER_CONN_ARGS
-	$GOPATH/src/github.com/hyperledger/fabric/.build/bin/peer chaincode install -n $n -v $v -p github.com/deevotech/sc-chaincode.deevo.io/food-supplychain
+	$GOPATH/src/github.com/hyperledger/fabric/.build/bin/peer chaincode install -n $n -v $v -p github.com/baoit09/sc-chaincode.deevo.io/food-supplychain
 done
 
 $GOPATH/src/github.com/hyperledger/fabric/.build/bin/peer chaincode list --installed -C $CHANNEL_NAME
