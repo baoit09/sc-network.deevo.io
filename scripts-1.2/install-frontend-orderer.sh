@@ -62,7 +62,7 @@ FABRIC_ROOT=$GOPATH/src/github.com/hyperledger/fabric
 
 #cp $FABRIC_ROOT/devenv/limits.conf /etc/security/limits.conf
 cd $GOPATH/src/github.com/hyperledger/fabric
-make dist-clean orderer configtxgen peer
+GO_TAGS=pluginsenabled make dist-clean orderer configtxgen peer
 
 sudo mkdir -p /var/hyperledger
 sudo chmod 777 -R /var/hyperledger
